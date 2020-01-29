@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Showtime.
+    -->
+    <changeSet id="20200129195715-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="movie_id"
+                                 baseTableName="showtime"
+                                 constraintName="fk_showtime_movie_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="movie"/>
+
+        <addForeignKeyConstraint baseColumnNames="theater_id"
+                                 baseTableName="showtime"
+                                 constraintName="fk_showtime_theater_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="theater"/>
+
+    </changeSet>
+</databaseChangeLog>
