@@ -1,0 +1,36 @@
+{
+    "name": "Showtime",
+    "fields": [
+        {
+            "fieldName": "time",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "showtime",
+            "relationshipName": "movie",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "theater",
+            "otherEntityRelationshipName": "showtime",
+            "relationshipName": "theater",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200129195715",
+    "entityTableName": "showtime",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "BoXofficeOnline",
+    "applications": "*",
+    "microserviceName": "BoXofficeOnline"
+}

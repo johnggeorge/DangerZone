@@ -1,0 +1,39 @@
+{
+    "name": "Customer",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "loyalty",
+            "fieldType": "Loyalty",
+            "fieldValues": "Gold,Silver,Bronze"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "booking",
+            "otherEntityRelationshipName": "customer",
+            "relationshipName": "booking",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200129195712",
+    "entityTableName": "customer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "BoXofficeOnline",
+    "applications": "*",
+    "microserviceName": "BoXofficeOnline"
+}

@@ -1,0 +1,51 @@
+{
+    "name": "Booking",
+    "fields": [
+        {
+            "fieldName": "noOfSeats",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "movie",
+            "otherEntityRelationshipName": "booking",
+            "relationshipName": "movie",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "showtime",
+            "otherEntityRelationshipName": "booking",
+            "relationshipName": "showtime",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "theater",
+            "otherEntityRelationshipName": "booking",
+            "relationshipName": "theater",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "booking",
+            "relationshipName": "customer",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200129195716",
+    "entityTableName": "booking",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "BoXofficeOnline",
+    "applications": "*",
+    "microserviceName": "BoXofficeOnline"
+}
